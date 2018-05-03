@@ -1,0 +1,92 @@
+// Gradients
+@mixin linearGradient($top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+  -pie-background: linear-gradient($top 1%, $bottom 30%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$top, endColorstr=$bottom, GradientType=0); /* IE6-9 */
+  behavior: url('/css/PIEcss.htc');
+}
+
+// RoundedCorners
+@mixin roundedAllCorners($br){
+  // $br: border radius
+  -webkit-border-radius: $br;
+  -moz-border-radius: $br;
+  border-radius: $br;
+  behavior: url('/css/PIEcss.htc');
+}
+
+@mixin roundedCorners($tl, $tr, $br, $bl){
+  -webkit-border-radius: $tl $tr $br $bl;
+  -moz-border-radius: $tl $tr $br $bl;
+  border-radius: $tl $tr $br $bl;
+  behavior: url('/css/PIEcss.htc');
+}
+
+// BoxShadow
+@mixin boxShadow($hl, $vl, $br, $sp, $color){
+  // $hl   : horitzontal length
+  // $vl   : vertical length
+  // $br   : blur radius
+  // $sp   : spread
+  // $color: color
+  -webkit-box-shadow: $hl $vl $br $sp $color;
+  box-shadow: $hl $vl $br $sp $color;
+  behavior: url('/css/PIEcss.htc');
+}
+
+@mixin boxShadowInset($hl, $vl, $br, $sp, $color){
+  // $hl   : horitzontal length
+  // $vl   : vertical length
+  // $br   : blur radius
+  // $sp   : spread
+  // $color: color
+  -webkit-box-shadow: inset $hl $vl $br $sp $color;
+  box-shadow: inset $hl $vl $br $sp $color;
+  behavior: url('/css/PIEcss.htc');
+}
+
+// Transitions
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+@mixin transition-property($property...) {
+  -moz-transition-property:    $property;
+  -o-transition-property:      $property;
+  -webkit-transition-property: $property;
+  transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+  -moz-transition-property:    $duration;
+  -o-transition-property:      $duration;
+  -webkit-transition-property: $duration;
+  transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function:    $timing;
+  -o-transition-timing-function:      $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+  -moz-transition-delay:    $delay;
+  -o-transition-delay:      $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay:         $delay;
+}
+
+////////////////////// USEFUL  //////////////////////
+@mixin disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

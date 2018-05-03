@@ -1,0 +1,13 @@
+<div id="contact-list-container">
+    <h2>Listado de contactos</h2>
+    <ul id="contact-list" class="list-group">
+    	<li class="list-group-item"*ngFor="let member of memberList; let i=index">
+    	<contact-item [member]='member'
+                    (clickFName)='editMemberFName(i)'
+                    (clickLName)='editMemberLName(i)'
+                    (clickRemove)='removeMember(i)'
+                    ></contact-item>
+  		</li>
+
+    </ul>
+</div>

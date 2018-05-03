@@ -1,0 +1,20 @@
+<form #contactInfo="ngForm" id="contact-info" (ngSubmit)="saveNewContact(contactInfo)">
+    <ul>
+        <li class="form-group">
+            <label for="contact-firstname">Nombre</label>
+            <input type="text" class="form-control" id="contact-firstname" placeholder="Nombre" name="fname" ngModel >
+        </li>
+        <li class="form-group">
+            <label for="contact-lastname">Apellidos</label>
+            <input type="text" class="form-control" id="contact-lastname" placeholder="Apellidos" name="lname" ngModel>
+        </li>
+        <li class="form-group">
+            <label for="contact-phonenumber">Teléfono</label>
+            <input type="text" class="form-control" id="contact-phonenumber" placeholder="Teléfono" name="phone" ngModel>
+        </li>
+    </ul>
+    <div id="form-actions">
+        <button type="submit" id="save-contact" class="btn btn-success">Save New Contact</button>
+        <button (click)='clickCancelHandler(contactInfo)' id="delete-contact" class="btn btn-danger">Cancel</button>
+    </div>
+</form>

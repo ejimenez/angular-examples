@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+* {
+  box-sizing: border-box;
+}
+
+// NORMALIZE | consistancy between browsers
+@import "partials/normalize";
+
+////* APP RELATED */////
+
+// SCSS VARIABLES
+@import "partials/variables";
+
+// SCSS USEFUL MIXINS
+@import "partials/mixins";
+
+// ELEMENTS
+@import "partials/elements";
+
+// LAYOUT
+@import "partials/layout";
+
+////* APP MAIN */////
+@import "partials/main";
